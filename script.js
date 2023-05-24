@@ -6,7 +6,7 @@ var mensaje;
 //La letra "o" es convertida para "ober"
 //La letra "u" es convertida para "ufat"
 
-//funcion para boton encriptar
+//función para boton encriptar
 function btnEncriptar(){
     //Lee y captura (selecciona) el texto sin encriptar ingresado.
     //.querySelector selecciona en masa (todo lo que yo le indique o que tenga una condición específica). En este caso todo lo que esté dentro del "textArea".
@@ -24,7 +24,7 @@ function btnEncriptar(){
     mensaje.style.backgroundImage = "none";
 }
 
-//funcion para boton desencriptar
+//función para boton desencriptar
 function btnDesencriptar(){
     //Lee y captura (selecciona) el texto sin encriptar ingresado.
     //.querySelector selecciona en masa (todo lo que yo le indique o que tenga una condición específica). En este caso todo lo que esté dentro del "textArea".
@@ -41,7 +41,7 @@ function btnDesencriptar(){
     //Se conserva la imagen de fondo del mensaje.
    }
 
-//funcion para encriptar
+//función para encriptar
 function encriptar(stringEncriptada){
     //Asigna un valor por la cual intercambiar la letra. Corchetes azules son una columna. Las comas son las filas. Primer valor: columna1 parte1 y segundo valor columna1 parte2.
     let matrizCodigo = [["e","enter"], ["i","imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -59,7 +59,7 @@ function encriptar(stringEncriptada){
     return stringEncriptada;
 }
 
-//funcion para desencriptar
+//función para desencriptar
 function desencriptar(stringDesencriptada){
      //Asigna un valor por la cual intercambiar la letra. Corchetes azules son una columna. Las comas son las filas. Primer valor: columna1 parte1 y segundo valor columna1 parte2.
     let matrizCodigo = [["e","enter"], ["i","imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]]
@@ -74,3 +74,14 @@ function desencriptar(stringDesencriptada){
     }
     return stringDesencriptada;
 }
+
+//función para copiar
+function btnCopiar(){
+    //Lee y captura (selecciona) el texto sin encriptar ingresado.
+    //.querySelector selecciona en masa (todo lo que yo le indique o que tenga una condición específica). En este caso todo lo que esté dentro del "mensaje".
+    mensaje = document.querySelector(".mensaje").value;
+    //Al usar el navigator hace referencia al navegador (objeto) que se use. Después se llama al portapapeles con el "clipboard" (clase) y por último se escribe o sobre escribe en el portapapeles con la función writetext (método) y se pone entre paréntesis lo que se va a sobreescribir. En este último caso vamos a reescribir lo que se guardó en la variable "mensaje". 
+    navigator.clipboard.writeText(mensaje);
+    alert("¡Texto copiado!");
+}
+
