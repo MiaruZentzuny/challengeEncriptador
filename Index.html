@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <title>Encript.it!</title>
 </head>
 <body>
+    
     <header>
         <img class="logo" src="imagenes\faviconei.png" alt="logo de encript.it!">
     </header>
-    <main>
+    <div class="contenido">
         <section>
             <textarea class="textArea" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
             <div>
@@ -24,15 +25,13 @@
             <div class="botones">
                 <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
                 <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>  
             </div>
         </section>
         <section>
             <textarea class="mensaje" cols="20" rows="10" placeholder="No hay mensajes encriptados"></textarea>
-            <div class="botones">
-                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
-                
-            </div>
         </section>
-    </main>
+        
+    </div>   
 </body>
 </html>

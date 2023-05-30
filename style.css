@@ -1,44 +1,58 @@
-*{
-    background: #FFFFFF;    
-    font-family: 'Inter';
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-/* identical to box height, or 48px */
-
-
-color: #A5A5A5;
-}
-
 .logo{
-    padding-top: 27px;
-    margin-left: 40px;
     width: 5%;
 }
 
-main{
+/* Cuando no lleva punto es una etiqueta */
+
+body{
+    margin: 5%;
+    margin-left: 4.5%;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    
+/* identical to box height, or 48px */
+
+    background-image: url(imagenes/Astronauta.svg);
+    background-image:cover;
+    background-repeat: no-repeat;
+    color: #A5A5A5;
+}
+.contenido{
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    margin: auto;
+    border-radius: 32px;
+    margin-left: 9%;
+    margin-top: 3%;
+}
+
+.contenido section{
+    margin-left: 1%;
 }
 
 .textArea{
     border: none;
     color: #0A3871;
     position: relative;
-    width: 1230px;
-    height: 844px;
-    margin-left: 170px;
-    margin-top: 140px;
+    width: auto;
+    height: 85%;
+    margin-left: 20px;
+    margin-top: auto;
     text-transform: lowercase;
-    background-image: url(imagenes/Astronauta.svg);
-    background-repeat: no-repeat;
-    
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+    
 }
 
-::placeholder {color: #0A3871; padding-top: 40; padding-left:40px;}
+.informacion{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 150%;
+}
+
+::placeholder {color: #0A3871; padding-top: 40; padding-left:15px;}
     .text-area:focus{
         outline: none;
         padding-top: 40; padding-left:40px;
@@ -46,20 +60,17 @@ main{
 
 .mensaje{
     position: relative;
-    width: 400px;
-    height: 970px;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
+    width: auto;
+    height: 85%;
+    margin-left: auto;
+    margin-top: auto;
+    padding-left: 5px;
+    margin-right: 5px;
     border: none;
     color: #495057;;
-    /* White */
-
     background: #FFFFFF;
-    /* shadow */
-
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
+    border-radius: 32px;  
 }
 .mensaje:focus{
     outline: none;
@@ -67,7 +78,10 @@ main{
 
 .botones{
     display: flex;
-    margin-top: 18px;
+    align-items: flex-start;
+    align-content: space-evenly;
+    margin-top: 0%;
+    margin-left: .2%;
 }
 
 .btn-encriptar{
@@ -76,9 +90,10 @@ main{
     color: #FFFFFF;
     border:1px solid #9B9EE8;
     border-radius: 24px;
-    width: 328px;
-    height: 67px;
+    font-size: 18px;
+    padding: 17px 63px;
 }
+
 .btn-desencriptar{
     cursor: pointer;
     background: #F8F8F8;
@@ -86,22 +101,34 @@ main{
     border-radius: 24px;
     color: #0A3871;
     margin-left: 30px;
-    width: 328px;
-    height: 67px;
-    /* Dark blue/dark-blue-300 */
+    padding: 17px 63px;
     border: 1px solid #0A3871;
-
+    font-size: 18px;
 }
+
 .btn-copiar{
     cursor: pointer;
     background: #F8F8F8;
     border-radius: 24px;
     color: #0A3871;
-    margin-left: 145px;
-    width: 328px;
-    height: 67px;
-    /* Dark blue/dark-blue-300 */
+    margin-left: 490px;
+    padding: 17px 63px;
     border: 1px solid #0A3871;
-    position: absolute;
-    
+    position: absolute;  
+    font-size: 18px; 
 }
+
+@media screen and (max-width:480px){
+    .textArea, .mensaje{
+        width: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-copiar, .btn-desencriptar, .btn-encriptar{
+        padding: 15px 105px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+} 
